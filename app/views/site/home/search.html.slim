@@ -1,0 +1,14 @@
+= render 'header'
+
+.container
+  .row
+    .col-lg-12
+      h3.page-header = "Photo Result: #{params[:search_photo_text]}"
+    - @results.each do |photo, index|
+      .col-lg-3.col-md-4.col-xs-6.thumb
+        a.thumbnail href="#{photo.url_c}" data-toggle="lightbox" data-title="#{photo.title}"
+
+          = image_tag (photo.url_q), :class => "img-responsive"
+
+  - if @results.any?
+    = will_paginate @results, renderer: BootstrapPagination::Rails

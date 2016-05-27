@@ -1,0 +1,7 @@
+.row
+  = form_tag '/site/home/search', :method => "get" do
+    .col-md-6.col-md-offset-3
+      .input-group
+        = text_field_tag(:search_photo_text, params[:search_photo_text], class: 'form-control search-text', :placeholder => "Photo")
+        span.input-group-btn
+           = submit_tag("Search", class: 'btn btn-default')
