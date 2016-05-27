@@ -1,0 +1,10 @@
+p = "Id: #{photo.id}"
+p = "Owner: #{photo.owner}"
+p = "Title: #{photo.title}"
+
+- if photo.ispublic == 1
+  p Public Photo
+- else
+  p Private Photo
+
+p = "Other Details: #{photo.inspect}"
