@@ -28,6 +28,7 @@ gem 'rails_12factor', group: :production
 group :development, :test do
   # Use for BDD/TDD
   gem 'rspec-rails'
+  gem "capybara"
 end
 
 group :development do
